@@ -8,6 +8,10 @@
     "start": "nodemon app.js",
     "gulp": "gulp"
   },
+  "engine": {
+    "node": "v6.11.3",
+    "npm": "5.3.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
