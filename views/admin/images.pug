@@ -1,0 +1,57 @@
+extends ../layout_admin
+
+block content
+  .admin-nav
+    nav(aria-label='breadcrumb', role='navigation')
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='/home') Home
+          li.breadcrumb-item
+            a(href='/typo/'+data._id)= data.title
+          li.breadcrumb-item.active(aria-current='page') Images
+    .userName-wrap
+      p.userName Username: <strong>#{user}</strong>
+      a.btn.btn-sm.btn-info.admin-user-setting-btn(href='/signup', role='button') Create new user
+      a.btn.btn-sm.btn-warning.admin-user-setting-btn(href='/logout', role='button') Log Out
+        
+  .admin-inner
+  
+    h2.admin-pageTitle Images
+    
+    ul.list-group
+      p.edit-nav Edit Navigation
+      li.list-group-item
+        a(href="/typo/"+data._id) Actual locking
+      li.list-group-item 
+        a(href="/contents/"+data._id) Text contents
+      li.list-group-item 
+        a(href="/clients/"+data._id) Clients
+      li.list-group-item.active
+        a(aria-current='page') Images
+    
+    .admin-edit-inner
+      p.images-title Thumbnail Image
+      .row.thumb-row
+        .images-box.col-4
+          .clients-img-wrap
+            img(src="/uploads/"+data.thumb)
+          .form-group
+            button.btn.btn-warning.insert-images-btn(type='button') Change
+            input.upload-images.form-control(type='file', style='display:none',data-id= data._id, data-column="thumb", data-type="update")
+        
+      p.images-title Other Images
+      .row
+        each image in data.images
+          .images-box.col-4
+            .clients-img-wrap
+              img(src="/uploads/"+image)
+            a.btn.btn-danger.delete-clients(href="/delete/image/"+data._id+"/"+image) delete
+            
+        .form-group.insert-upload
+          button.btn.btn-info.insert-images-btn(type='button') Insert a new image
+          input.upload-images.form-control(type='file', style='display:none',data-id= data._id, data-column="images", data-type="insert")
+        
+                    
+
+  
+  

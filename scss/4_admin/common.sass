@@ -1,0 +1,94 @@
+.admin-container
+  display: flex
+  flex-direction: column
+  width: 100%
+  background: #fefefe
+
+.admin-nav
+  width: 100%
+  height: 50px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  background: white
+  position: fixed
+  top: 0
+  z-index: 10
+  .breadcrumb
+    background-color: white
+
+  .userName-wrap
+    height: 100%
+    width: 500px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-end
+    .userName
+      font-size: 1rem
+      margin-bottom: 0
+      margin-right: 40px
+      strong
+        font-size: 1.5rem
+    a.admin-user-setting-btn
+      margin-right: 20px
+
+
+  .admin-nav-ul
+    margin: 0
+    padding: 0
+    height: 100%
+    .admin-nav-li
+      text-decoration: none
+      border-right: 1px solid $admin-nav-text
+      text-align: center
+      height: 100%
+      width: 150px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-left: -1px
+      float: left
+      a
+        text-decoration: none
+        width: 100%
+        font-size: 1rem
+        color: $admin-nav-text
+        display: block
+        transition: all 0.3s ease-in-out
+      &:hover
+        background: red
+
+.admin-inner
+  width: 100%
+  padding: 50px
+
+.admin-pageTitle
+  padding: 50px
+  font-size: 3rem
+
+
+.list-group-item
+  font-size: 0.8em
+  transition: all .3s ease
+  cursor: pointer
+  padding: 0
+  width: 100%
+  height: 60px
+  text-align: center
+  a
+    padding-top: 15px
+    display: block
+    width: 100%
+    height: 100%
+    text-decoration: none
+  &:hover
+    background: #006ad2
+    a
+      color: white
+
+.edit-nav
+  color: #006ad2
+.admin-edit-inner
+  width: 80%
+  margin-left: 20%

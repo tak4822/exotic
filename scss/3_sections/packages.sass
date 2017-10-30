@@ -1,0 +1,250 @@
+.extra-padding
+  padding: 0 3%
+  @media screen and (max-width: 1900px)
+    padding: 0
+
+.package-text
+  width: 50%
+  margin-bottom: 30px
+  font-size: 1.2em
+  @media screen and (max-width: 1526px)
+    margin-bottom: 10px
+    font-size: 1em
+  @media screen and (max-width: $tablet)
+    width: 100%
+    margin-bottom: 30px
+    font-size: 1.2em
+
+
+.pakages-wrap
+  width: 100%
+  height: 600px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  @media screen and (max-width: 1900px)
+    height: 700px
+  @media screen and (max-width: 1350px)
+    flex-wrap: wrap
+    height: 800px
+  @media screen and (max-width: $tablet)
+    flex-direction: column
+    height: auto
+    justify-content: center
+.box
+  color: $purple
+  padding: 30px
+  width: 25%
+  height: 90%
+  background:
+    image: url("../img/box.svg")
+    size: contain
+    repeat: no-repeat
+    position: center top
+  @media screen and (max-width: 1900px)
+    width: 30%
+    padding-top: 50px
+  @media screen and (max-width: 1526px)
+    padding-top: 30px
+  @media screen and (max-width: $desktop)
+    width: 28%
+  @media screen and (max-width: 1350px)
+    width: 35%
+  @media screen and (max-width: 1116px)
+    width: 40%
+  @media screen and (max-width: $tablet)
+    background-image: none
+    width: 80%
+    height: auto
+    border: 3px solid $purple
+    margin-bottom: 40px
+  @media screen and (max-width: $lg-phone)
+    width: 90%
+    padding: 15px
+  @media screen and (max-width: 360px)
+    width: 100%
+  .pac-list-li
+    &::after
+      content: url("../img/list-deco-purple.svg")
+  .pac-desc
+    margin-bottom: 30px
+    @media screen and (max-width: $desktop)
+      font-size: 0.9em
+      margin-bottom: 10px
+    @media screen and (max-width: $tablet)
+      font-size: 1.2em
+  .pac-list-li
+    @media screen and (max-width: $desktop)
+      font-size: 0.9em
+    @media screen and (max-width: $tablet)
+      font-size: 1.2em
+
+.sp-box
+  color: white
+  padding: 30px
+  height: 100%
+  width: 30%
+  background:
+    image: url("../img/sp-box.svg")
+    size: contain
+    repeat: no-repeat
+    position: center top
+  @media screen and (max-width: 1900px)
+    width: 35%
+  @media screen and (max-width: $desktop)
+    width: 40%
+  @media screen and (max-width: 1350px)
+    width: 55%
+  @media screen and (max-width: 1200px)
+    width: 60%
+  @media screen and (max-width: 1116px)
+    width: 55%
+  @media screen and (max-width: $tablet)
+    background-image: none
+    background: $purple
+    width: 90%
+    height: auto
+    margin-bottom: 40px
+  @media screen and (max-width: $lg-phone)
+    width: 100%
+    padding: 15px
+  .pac-list-li
+    &::after
+      content: url("../img/list-deco-white.svg")
+
+.pac-head
+  text-align: center
+  margin-bottom: 20px
+
+.pac-list-ul
+  list-style: none
+  padding-left: 0
+
+.pac-list-li
+  padding-left: 20px
+  position: relative
+  margin-bottom: 10px
+  &::after
+    position: absolute
+    top: 0.55em
+    left: 0
+    width: 10px
+    height: 10px
+    content: url("../img/list-deco-purple.svg")
+
+a.pac-btn
+  width: 100%
+  padding-top: 15px
+  padding-bottom: 15px
+  display: block
+  text-align: center
+  background: $pink
+  transition: all .3s ease
+  &:hover
+    background: $active-pink
+
+
+//independent
+.buy-typo
+  @media screen and (max-width: $desktop)
+    order: 1
+  @media screen and (max-width: 1350px)
+    order: 1
+  .pac-list-ul
+    margin-bottom: 30px
+
+  select
+    width: 100%
+    height: 50px
+    margin-bottom: 50px
+
+.consulting
+  @media screen and (max-width: $desktop)
+    order: 3
+  @media screen and (max-width: 1350px)
+    order: 2
+  h3
+    font-size: 2em
+    @media screen and (max-width: 1350px)
+      font-size: 3em
+    @media screen and (max-width: 1116px)
+      font-size: 2em
+    @media screen and (max-width: 360px)
+      margin-top: 20px
+  .pac-list-ul
+    margin-bottom: 50px
+    @media screen and (max-width: 1526px)
+      margin-bottom: 20px
+    @media screen and (max-width: $desktop)
+      margin-top: 30px
+      margin-bottom: 50px
+    .pac-list-li
+      font-size: 1.2em
+      @media screen and (max-width: 1526px)
+        font-size: 1em
+      @media screen and (max-width: $desktop)
+        margin-bottom: 10px
+      @media screen and (max-width: 1350px)
+        font-size: 1.6em
+      @media screen and (max-width: 1116px)
+        font-size: 1.2em
+      @media screen and (max-width: $tablet)
+        font-size: 1.5em
+        font-weight: 400
+      @media screen and (max-width: $lg-phone)
+        font-size: 1.2em
+  .pac-desc
+    @media screen and (max-width: 1350px)
+      font-size: 1.3em
+    @media screen and (max-width: 1116px)
+      font-size: 1em
+    @media screen and (max-width: $tablet)
+      font-size: 1.3em
+    @media screen and (max-width: $lg-phone)
+      font-size: 1.2em
+.makeown
+  @media screen and (max-width: $desktop)
+    order: 2
+  @media screen and (max-width: 1350px)
+    order: 3
+  @media screen and (max-width: 1350px)
+    margin-top: -200px
+  @media screen and (max-width: $tablet)
+    margin-top: 0
+  h3
+    font-size: 1.1em
+    line-height: 1.6em
+    @media screen and (max-width: $desktop)
+      font-size: 0.9em
+  .pac-list-ul
+    margin-bottom: 50px
+    @media screen and (max-width: 1526px)
+      margin-bottom: 20px
+    @media screen and (max-width: $desktop)
+      margin-top: 20px
+      margin-bottom: 40px
+    .pac-list-li
+      font-size: 1.2em
+      @media screen and (max-width: 1526px)
+        font-size: 1em
+      @media screen and (max-width: $tablet)
+        font-size: 1.2em
+
+.options-top-field.tester-select.package
+  position: relative
+  width: 100%
+  margin-bottom: 20px
+  &:before
+    content: url("../img/purpleDown.svg")
+    position: absolute
+    width: 20px
+    height: 20px
+    display: inline-block
+    top: 35%
+    right: 20px
+  .tester-select-wrap.package
+    width: 100%
+    select.select
+      border: 3px solid $purple !important
+      color: $purple
+      width: 100%

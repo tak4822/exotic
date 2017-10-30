@@ -1,0 +1,78 @@
+.home-clip-svg
+  width: 57%
+  position: fixed
+  top: 18%
+  left: 50%
+  margin-left: -43%
+  fill: $yellow
+  transition: 0.2s linear
+  @media screen and (max-width: 1390px)
+    width: 83%
+    top: 5%
+    margin-left: -48%
+  @media screen and (max-width: $tablet)
+    width: 105%
+    top: 30%
+    margin-left: -53%
+  @media screen and (max-width: 900px)
+    margin-left: -70%
+    width: 125%
+  @media screen and (max-width: $lg-phone)
+    width: 100%
+    margin-left: -50%
+    top: 5%
+  @media screen and (max-width: $sm-phone)
+    top: 0
+.home-contents-wrap
+  width: 32%
+  height: 350px
+  position: fixed
+  top: 53%
+  left: 62.5%
+  @media screen and (max-width: 1950px)
+    top: 45%
+  @media screen and (max-width: 1390px)
+    top: 27%
+    left: 42.5%
+    width: 50%
+  @media screen and (max-width: $tablet)
+    top: 23%
+    left: 48.5%
+  @media screen and (max-width: 900px)
+    left: 40.5%
+    width: 60%
+  @media screen and (max-width: $lg-phone)
+    left: 5%
+    width: 70%
+    top: 53%
+  @media screen and (max-width: 679px)
+    top: 55%
+    width: 80%
+  @media screen and (max-width: 585px)
+    top: 45%
+    width: 100%
+  @media screen and (max-width: $sm-phone)
+    top: 37%
+  .home-head
+    margin-bottom: 15px
+    font-size: 1.5em
+    @media screen and (max-width: $sm-phone)
+      font-size: 1.2em
+      margin-bottom: 10px
+  .home-text
+    margin-bottom: 8%
+    font-size: 1em
+    width: 90%
+    line-height: 1.5em
+  .home-btn-text
+    background: $head-color
+    text-decoration: none
+    color: white
+    padding: 12px 26px
+    transition: all .5s ease
+    position: relative
+    top: 0
+    font-size: 0.8em
+    &:hover
+      top: -10px
+      background: $active-pink

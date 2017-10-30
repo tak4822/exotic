@@ -1,0 +1,22 @@
+extends ../layout_admin
+
+block content
+  include ../partials/admin_nav
+  .admin-inner
+    h2.admin-pageTitle Upload Images
+    .form-group
+      button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#file') Add File
+      span#completed
+      #file.modal(tabindex='-1', role='dialog')
+        .modal-dialog
+          .modal-content
+            .modal-header
+              .modal-title Upload Image
+              button#close.close(type='button', data-dismiss='modal') ×
+        
+            .modal-body
+              .row
+                .progress
+                  .progress-bar(role='progressbar')
+                button.btn.btn-lg.btn-primary.upload-btn(type='button') Upload File
+                input#upload-input.form-control(type='file', name='upload', style='display:none')

@@ -1,0 +1,16 @@
+.admin-nav
+  nav(aria-label='breadcrumb', role='navigation')
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href='/home') Home
+      li.breadcrumb-item
+        a(href='/typo') Typography
+      li.breadcrumb-item.active(aria-current='page') Data
+
+  .userName-wrap
+    p.userName Username: <strong>#{user}</strong>
+    a.btn.btn-sm.btn-info.admin-user-setting-btn(href='/signup', role='button') Create new user
+    a.btn.btn-sm.btn-warning.admin-user-setting-btn(href='/logout', role='button') Log Out
+      
+
+    

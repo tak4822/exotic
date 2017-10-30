@@ -1,0 +1,353 @@
+
+//tester btn in front
+.tester-btn
+  right: -20px
+  top: 50%
+  position: fixed
+  width: 150px
+  transform: rotate(-90deg)
+  text-align: center
+  font-size: 1.3em
+  color: $pink
+  cursor: pointer
+  z-index: 10
+  @media screen and (max-width: $tablet)
+    transform: rotate(0deg)
+    top: 92vh
+    border-bottom: 0
+    right: 0
+    height: 8vh
+    width: 100%
+    background: $pink
+    color: white
+    font-size: 1.8em
+    padding-top: 2vh
+  @media screen and (max-width: $lg-phone)
+    padding-top: 1vh
+
+
+.tester-btn-anim
+  opacity: 0
+.active
+  opacity: 1
+
+//tester bar
+.tester-container
+  width: 80%
+  height: 100vh
+  position: fixed
+  top: 0
+  right: 0
+  z-index: 100
+  background: white
+  display: flex
+  flex-direction: column
+  transition: all 0.5s ease
+  transform: translateX(81vw)
+  @media screen and (max-width: $tablet)
+    transform: translateX(0)
+    top: 100%
+    height: 100vh
+    width: 100%
+
+
+//close button
+.close-btn-tester-wrap
+  position: absolute
+  top: 10px
+  right: 10px
+  display: inline-block
+  height: 40px
+  width: 40px
+  text-align: center
+  cursor: pointer
+  &:hover
+    .close-btn-tester
+      font-size: 70px
+  .close-btn-tester
+    color: white
+    font-size: 60px
+    margin: 0
+    line-height: 40px
+    transition: all .3s ease
+
+
+.tester-options
+  width: 100%
+  background: $purple
+  padding: 20px
+  z-index: -2
+
+//options top
+.options-top-container
+  display: flex
+  justify-content: flex-start
+  height: 100px
+  margin-bottom: 20px
+  @media screen and (max-width: $lg-phone)
+    flex-direction: column
+    height: 180px
+    margin-bottom: 0
+  @media screen and (max-width: $sm-phone)
+    flex-direction: row
+    height: 80px
+    margin-bottom: 10px
+  .options-top-field
+    display: flex
+    flex-direction: column
+    margin-right: 30px
+    @media screen and (max-width: $lg-phone)
+      height: 100px
+
+
+.tester-label
+  color: white
+  margin-bottom: 10px
+.options-top-field.tester-select
+  @media screen and (max-width: 360px)
+    margin-right: 10px
+//select typo
+.tester-select-wrap
+  position: relative
+  @media screen and (max-width: $sm-phone)
+    width: 150px
+  @media screen and (max-width: 360px)
+    width: 120px
+    margin: 0
+  &:before
+    content: url("../img/downIcon.svg")
+    position: absolute
+    width: 20px
+    height: 20px
+    display: inline-block
+    top: 40%
+    right: 20px
+    z-index: -1
+    @media screen and (max-width: $sm-phone)
+      width: 15px
+      height: 15px
+      top: 30%
+    @media screen and (max-width: 360px)
+      right: 10px
+      top: 40%
+  .select
+    height: 50px
+    width: 250px
+    border: 3px solid white
+    appearance: none
+    font-size: 0.9em
+    display: block
+    padding-left: 20px
+    color: white
+    @media screen and (max-width: $lg-phone)
+      width: 100%
+    @media screen and (max-width: $sm-phone)
+      width: 150px
+      height: 40px
+    @media screen and (max-width: 360px)
+      width: 120px
+//weight
+.weight-wrap
+  display: flex
+  justify-content: flex-start
+  height: 100%
+  align-items: flex-start
+  flex-wrap: wrap
+  flex-shrink: -1
+  @media screen and (max-width: $sm-phone)
+    flex-wrap: nowrap
+.weigth-box
+  border: 2px solid white
+  padding: 4px 15px
+  margin-right: 10px
+  transition: all 0.3s ease
+  border-radius: 8px
+  cursor: pointer
+  @media screen and (max-width: $sm-phone)
+    padding: 4px 8px
+  &:hover
+    background: white
+    .weight-text
+      color: $purple
+
+  .weight-text
+    color: white
+    display: inline-block
+    margin: 0
+    transition: all 0.3s ease
+    @media screen and (max-width: $sm-phone)
+      font-size: 0.7em
+
+.weigth-box.active
+  background: white
+  .weight-text
+    color: $purple
+
+//////optioiins bottom
+.options-bottom-container
+  display: flex
+  flex-direction: row
+  color: white
+  @media screen and (max-width: $lg-phone)
+    flex-wrap: wrap
+  .options-bottom-wrap
+    display: flex
+    flex-direction: column
+    @media screen and (max-width: $lg-phone)
+      margin-left: 0
+
+.tester-label-sm
+  font-size: 0.9em
+  margin-bottom: 10px
+.options-input-wrap
+  display: flex
+
+//color
+.options-bottom-wrap.color
+  @media screen and (max-width: 360px)
+    flex-direction: row
+    .tester-label-sm
+      margin-right: 10px
+.options-col-wrap
+  margin-right: 20px
+  display: flex
+  position: relative
+
+  .font-col-label
+    margin-right: 10px
+
+.color-picker
+  width: 30px
+  height: 30px
+  transition: all 0.3s ease
+  cursor: pointer
+  z-index: 20
+  &:hover
+    transform: scale(1.1)
+.font-col-pk
+  background: $pink
+.bg-col-pk
+  background: white
+
+#colorpicker_1
+  top: -100px !important
+  left: 100px !important
+  z-index: 30
+#colorpicker_2
+   top: -100px !important
+   left: 150px !important
+   z-index: 30
+//size
+.options-bottom-wrap
+  margin-left: 20px
+.options-bottom-wrap.size
+  position: relative
+  width: 150px
+  @media screen and (max-width: $lg-phone)
+    margin-top: 20px
+  .size-text
+    position: absolute
+    top: 0
+    right: 20px
+    font-size: 1.3em
+    .tester-label-sm
+      font-size: 0.7em
+  .size-slider
+    position: absolute
+    bottom: 10px
+    left: 0
+    width: 100%
+    height: 5px
+    -webkit-appearance: none
+    background: white
+    outline: none
+    opacity: 0.9
+    -webkit-transition: .2s
+    transition: opacity .2s
+    @media screen and (max-width: $lg-phone)
+      bottom: 0
+    @media screen and (max-width: 360px)
+      bottom: 10
+    &:hover
+      opacity: 1
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      appearance: none
+      width: 15px
+      height: 15px
+      background: $pink
+      cursor: pointer
+
+input[type="number"].options-size
+  width: 80px
+.case
+  @media screen and (max-width: $lg-phone)
+    margin-left: 10px !important
+  @media screen and (max-width: 360px)
+    margin-left: 0 !important
+    margin-top: 20px
+//case
+.case-box
+  width: 35px
+  height: 35px
+  border: 2px solid white
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-right: 10px
+  transition: all .3s ease
+  cursor: pointer
+  border-radius: 8px
+  &:hover
+    background-color: white
+    .case-text
+      color: $purple
+  .case-text
+    margin: 0
+
+.case-box.active
+  background: white
+  .case-text
+    color: $purple
+
+.upper
+  text-transform: uppercase
+.lower
+  text-transform: lowercase
+
+//// tester field
+.tester-field
+  background: white
+  color: $pink
+  width: 100%
+  height: 70%
+  flex-grow: 1
+  padding: 20px
+  resize: none
+  z-index: -3
+  font-size: 50px
+  overflow-x: scroll
+  &:focus
+    outline: none
+
+//tester buttons
+.tester-btns
+  width: 100%
+  height: 200px
+  padding: 20px
+  margin-top: 20px
+  @media screen and (max-width: $sm-phone)
+    height: 100px
+  .duble-btn
+    @media screen and (max-width: $tablet)
+      padding: 20px 30px
+      font-size: 1.5em
+    @media screen and (max-width: $lg-phone)
+      padding: 10px 20px
+      font-size: 1.2em
+    @media screen and (max-width: $sm-phone)
+      padding: 5px 10px
+      font-size: 1em
+  .buy-btn
+    @media screen and (max-width: $tablet)
+      margin-right: 20px

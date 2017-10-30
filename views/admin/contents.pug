@@ -1,0 +1,63 @@
+extends ../layout_admin
+
+block content
+  .admin-nav
+    nav(aria-label='breadcrumb', role='navigation')
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='/home') Home
+          li.breadcrumb-item
+            a(href='/typo/'+data._id)= data.title
+          li.breadcrumb-item.active(aria-current='page') Contents
+        
+    .userName-wrap
+      p.userName Username: <strong>#{user}</strong>
+      a.btn.btn-sm.btn-info.admin-user-setting-btn(href='/signup', role='button') Create new user
+      a.btn.btn-sm.btn-warning.admin-user-setting-btn(href='/logout', role='button') Log Out
+        
+  .admin-inner
+    h2.admin-pageTitle Text contents
+    ul.list-group
+      p.edit-nav Edit Navigation
+      li.list-group-item
+        a(href="/typo/"+data._id) Actual locking
+      li.list-group-item.active
+        a(aria-current='page') Text contents
+      li.list-group-item 
+        a(href="/clients/"+data._id) Clients
+      li.list-group-item 
+        a(href="/images/"+data._id) Images
+        
+    form.edit-form(action="/edit/contents/"+data._id, method="POST")
+      //title
+      .form-group
+        label(for='title') Title
+        input.form-control(type='text',name="title", value= data.title, required)
+          
+      //category
+      .form-group
+        label Category
+        br
+        - var categories = ["serif", "sans", "script", "decorative"];
+        each cat in categories
+          -if(cat == data.category)
+            .form-check.form-check-inline
+              label.form-check-label
+                input.form-check-input(type='radio', name="category", value= cat, checked)
+                = cat
+          -else
+            .form-check.form-check-inline
+              label.form-check-label
+                input.form-check-input(type='radio', name="category", value= cat)
+                = cat
+        
+      //description
+      .form-group
+        label Description
+        br
+        textarea.insert-desc.form-control(type='text',name="desc", placeholder='Enter Description', required)= data.description
+        
+                
+      button.btn.btn-success.btn-lg(type='submit', name='edit') Edit
+
+    

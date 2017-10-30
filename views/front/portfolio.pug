@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  .svg-bg-wrap
+    svg(xmlns='http://www.w3.org/2000/svg', viewbox='1975.907 0 1214.173 1081.859')
+      path#Path_11.svg-bg.purple(d='M5168.08,0,4509.592,1081.859H3953.907V0Z', transform='translate(-2420)')
+  .main-container
+    .filter-select-wrap
+      label.filter-select Category
+        select#filter.select
+          option(value="all") All
+          option(value='serif') Serif
+          option(value='sans') Sans serif
+          option(value='script') Script
+          option(value='decorative') Decorative
+    .inner-container.row
+      each val in data
+        .col-sm-12.col-md-6.col-xl-4.element-item(data-category= val.category,)
+          .work-wrap()
+            .yellow-hover-effect
+            a.work-thumb(href="/detail/"+val._id)
+              img(src="/uploads/"+val.thumb alt="typography"+val.title)
+          
+      
+      

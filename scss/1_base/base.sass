@@ -1,0 +1,113 @@
+//mixin
+=clearfix
+  &:after
+    clear: both
+    content: " "
+    display: table
+
+// for all
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+
+body.front
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="submit"],
+  select,
+  textarea
+    margin: 0
+    padding: 0
+    border: 0
+    background-color: transparent
+    outline: 0
+    border-radius: 0
+    padding-right: 20px
+
+// Links
+.hover
+  text-decoration: none
+  transition: all 0.3s ease
+
+  &:hover
+    color: $active-pink
+    margin-top: -5px
+
+.link-inside-text
+  text-decoration: none
+  color: $pink
+  transition: all 0.3s ease
+
+  &:hover
+    color: $active-pink
+
+.lead
+  display: inline-block
+  margin: 0
+  margin-left: 10px
+
+.text-center
+  margin: 200px auto
+  display: flex
+  align-items: center
+
+.text-align
+  text-align: center
+
+//base container
+.main-container
+  width: 95%
+  margin: auto
+  padding-top: 180px
+
+  .inner-container
+    width: 90%
+    margin: auto
+
+//svg background
+.svg-bg-wrap
+  z-index: -100
+  position: fixed
+  width: 100%
+  height: 100vh
+  @media screen and (max-width: $tablet)
+    transform: rotate(20deg) scale(3) translate(30%)
+  @media screen and (max-width: 600px)
+    transform: rotate(20deg) scale(7) translateX(30%) translateY(2%)
+  .svg-bg
+    height: 100%
+
+.yellow
+  fill: $yellow
+
+.purple
+  fill: $purple
+
+.white
+  fill: white
+
+.purple-back
+  background: $purple
+
+.yellow-back
+  background: $yellow
+
+.color-back
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: -101
+
+.overlay
+  z-index: 3
+  background: rgba(0, 0, 0, 0.7)
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  display: none

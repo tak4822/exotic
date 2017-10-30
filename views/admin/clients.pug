@@ -1,0 +1,47 @@
+extends ../layout_admin
+
+block content
+  .admin-nav
+    nav(aria-label='breadcrumb', role='navigation')
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='/home') Home
+          li.breadcrumb-item
+            a(href='/typo/'+data._id)= data.title
+          li.breadcrumb-item.active(aria-current='page') Clients
+    .userName-wrap
+      p.userName Username: <strong>#{user}</strong>
+      a.btn.btn-sm.btn-info.admin-user-setting-btn(href='/signup', role='button') Create new user
+      a.btn.btn-sm.btn-warning.admin-user-setting-btn(href='/logout', role='button') Log Out
+        
+  .admin-inner
+  
+    h2.admin-pageTitle Clients
+    
+    ul.list-group
+      p.edit-nav Edit Navigation
+      li.list-group-item
+        a(href="/typo/"+data._id) Actual locking
+      li.list-group-item 
+        a(href="/contents/"+data._id) Text contents
+      li.list-group-item.active
+        a(aria-current='page') Clients
+      li.list-group-item 
+        a(href="/images/"+data._id) Images
+    
+    .admin-edit-inner
+      .row
+        each client in data.clients
+          .clients-box.col-3
+            .clients-img-wrap
+              img(src="/uploads/"+client)
+            a.btn.btn-danger.delete-clients(href="/delete/clients/"+data._id+"/"+client) delete
+            
+        .form-group.insert-upload
+          button.btn.btn-info.insert-images-btn(type='button') Insert a new clients
+          input.upload-images.form-control(type='file', style='display:none',data-id= data._id, data-column="clients", data-type="insert")
+        
+                    
+
+  
+  

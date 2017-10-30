@@ -1,0 +1,39 @@
+extends ../layout_admin.pug
+
+block content
+  include ../partials/admin_nav
+  .admin-inner
+    .small-container
+      h2.login-title Create a new user
+      form(method='POST' action='/signup')
+        
+        if (hasErrors)
+          each msg in messages
+            .alert.alert-danger
+              button.close(type='button', data-dismiss='alert', aria-label='Close')
+                span(aria-hidden='true') 
+                 | &times;
+              = msg
+
+        if (noErrors)
+          .alert.alert-success
+            button.close(type='button', data-dismiss='alert', aria-label='Close')
+              span(aria-hidden='true') 
+               | &times;
+            = success
+
+        .form-group
+            label(for='formGroupExampleInput') User Name
+            input#formGroupExampleInput.form-control(
+              type='text',
+              name='username',
+              placeholder='UserName')
+           
+        .form-group
+          label(for='formGroupExampleInput2') Password
+          input#formGroupExampleInput2.form-control(
+            type='password',
+            name='password',
+            placeholder='Password')
+            
+        button.btn.btn-info(type='submit', name='signup') Sign Up 

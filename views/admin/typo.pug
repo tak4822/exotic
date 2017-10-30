@@ -1,0 +1,52 @@
+extends ../layout_admin
+
+block content
+  .admin-nav
+    nav(aria-label='breadcrumb', role='navigation')
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='/home') Home
+        li.breadcrumb-item.active
+          a(aria-current='page') Portfolio
+        
+
+    .userName-wrap
+      p.userName Username: <strong>#{user}</strong>
+      a.btn.btn-sm.btn-info.admin-user-setting-btn(href='/signup', role='button') Create new user
+      a.btn.btn-sm.btn-warning.admin-user-setting-btn(href='/logout', role='button') Log Out
+        
+  .admin-inner
+    h2.admin-pageTitle Portfolio
+    ul.list-group
+      p.edit-nav Edit Navigation
+      li.list-group-item.active
+        a(aria-current='page') Actual locking
+      li.list-group-item 
+        a(href="/contents/"+data._id) Text contents
+      li.list-group-item 
+        a(href="/clients/"+data._id) Clients
+      li.list-group-item 
+        a(href="/images/"+data._id) Images
+    
+
+    .looking-image-container
+      img(src="/uploads/"+data.thumb, alt= data.title)
+      each img in data.images
+        img(src="/uploads/"+img, alt= data.title)
+      
+    .detail-text-container
+      p.category Category: #{data.category}
+      h3.detail-title= data.title
+      p.detal-desc= data.description
+      p.detail-client-head Clients
+      .detail-client-container
+        each client in data.clients
+          .detail-client-wrap
+            img(src="/uploads/"+client, alt= client)
+          
+      
+    
+
+    
+        
+    

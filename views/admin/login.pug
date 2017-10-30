@@ -1,0 +1,29 @@
+extends ../layout_admin.pug
+
+block content
+  .small-container
+    h2.login-title Log In
+    form(method='POST' action='/login')
+      if (hasErrors)
+        each msg in messages
+          .alert.alert-danger
+            button.close(type='button', data-dismiss='alert', aria-label='Close')
+              span(aria-hidden='true') 
+               | &times;
+            = msg
+      
+      .form-group
+          label(for='formGroupExampleInput') User Name
+          input#formGroupExampleInput.form-control(
+            type='text',
+            name='username',
+            placeholder='UserName')
+         
+      .form-group
+        label(for='formGroupExampleInput2') Password
+        input#formGroupExampleInput2.form-control(
+          type='password',
+          name='password',
+          placeholder='Password')
+          
+      button.btn.btn-primary(type='submit', name='login') Log in 

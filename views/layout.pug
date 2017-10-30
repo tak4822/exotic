@@ -1,0 +1,44 @@
+doctype html(lang='en')
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(http-equiv='x-ua-compatible', content='ie=edge')
+  title Vanarts week8 Projeect
+  //reset css
+  link(rel="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")
+  // normarize css
+  link(rel="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
+  //boot strap
+  link(rel="stylesheet",  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css",  integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+  // typekit brandon grotesk
+  script(src="https://use.typekit.net/uzk1bmh.js")
+  script(try{Typekit.load({ async: true });}catch(e){})
+  // google font Kumar One
+  link(href="https://fonts.googleapis.com/css?family=Kumar+One", rel="stylesheet")
+  link(rel="stylesheet", href="/css/colpick.css")
+  link(rel='stylesheet', href='/css/main.css')
+
+  body.front
+    .overlay
+    //header
+    include partials/header
+    //tester
+    include partials/tester
+    // content block
+    block content
+      
+    //footer
+    include partials/footer
+    
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js", 
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",
+      crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb", crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js",  integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn", crossorigin="anonymous")
+    script(src="/js/modernizr-custom.js")
+    script(src='/js/colpick.js')
+    script(src='/js/isotope.pkgd.min.js')
+    script(src='/js/main.js')
+    script(src='/js/tester.js')
+    

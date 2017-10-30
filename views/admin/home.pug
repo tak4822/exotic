@@ -1,0 +1,37 @@
+extends ../layout_admin
+
+block content
+  .admin-nav
+    nav(aria-label='breadcrumb', role='navigation')
+      ol.breadcrumb
+        li.breadcrumb-item.active
+          a(aria-current='page') Home
+        
+
+    .userName-wrap
+      p.userName Username: <strong>#{user}</strong>
+      a.btn.btn-sm.btn-info.admin-user-setting-btn(href='/signup', role='button') Create new user
+      a.btn.btn-sm.btn-warning.admin-user-setting-btn(href='/logout', role='button') Log Out
+        
+
+  .admin-inner
+    .home-head-wrap
+      h2.admin-pageTitle Admin Home
+      a.btn.btn-lg.btn-info.insert-btn(href='/insert') Create a new portfolio
+    .typo-thumbs-container
+      .row      
+        each typo in data
+          .col-4
+            .card(style='width: 20rem;')
+              .card-img-top
+                img(src='uploads/'+typo.thumb)
+              .card-body
+                h4.card-title= typo.title
+                .cards-btn
+                  a.btn.btn-success(href='/typo/'+typo._id) Edit
+                  a.btn.btn-danger.delete-btn(href='/delete/'+typo._id) Delete
+                
+              
+              
+        
+    

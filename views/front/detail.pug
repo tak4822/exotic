@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  .svg-bg-wrap
+    svg(xmlns='http://www.w3.org/2000/svg', viewbox='1975.907 0 1214.173 1081.859')
+      path#Path_11.svg-bg.yellow(d='M5168.08,0,4509.592,1081.859H3953.907V0Z', transform='translate(-2420)')
+  .main-container
+    .inner-container
+      a.back-to-portofolio(href="/portfolio") Back to Portofolio
+      .detail-text-container
+        h3.detail-title= data.title
+        p.detal-desc= data.description
+        p.detail-client-head Clients
+        .detail-client-container
+          each client in data.clients
+            .detail-client-wrap
+              img(src="/uploads/"+client alt= client)
+          
+        .detail-btn-container
+          a.buy-btn.duble-btn(href="/buy/"+data._id) Buy #{data.title}
+          a.package-btn.duble-btn(href="/packages") Check Packages
+          
+      .detail-image-container
+        img(src="/uploads/"+data.thumb, alt= data.title)
+        each img in data.images
+          img(src="/uploads/"+img, alt= data.title)
+      

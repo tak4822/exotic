@@ -1,0 +1,135 @@
+.back-to-portofolio
+  text-decoration: none
+  height: 50px
+  display: inline-block
+  position: relative
+  padding-left: 15px
+  transition: all .3s ease
+  color: $text-color
+  &::after
+    content: url("../img/backIcon.svg")
+    position: absolute
+    top: 0.45em
+    left: 0
+    height: 9px
+    width: 9px
+    transition: all .3s ease
+  &:hover
+    text-decoration: none
+    font-style: italic
+    color: $text-color
+    &::after
+      left: -10px
+
+.detail-image-container
+  height: auto
+  width: 55%
+  @media screen and (max-width: 1300px)
+    width: 45%
+  @media screen and (max-width: $tablet)
+    width: 100%
+  img
+    width: 100%
+    height: auto
+    margin-bottom: 20px
+.detail-text-container
+  position: fixed
+  top: 230px
+  left: 57%
+  width: 37%
+  height: 700px
+  @media screen and (max-width: 1300px)
+    width: 45%
+    left: 47%
+  @media screen and (max-width: $tablet)
+    position: static
+    width: 100%
+    height: auto
+
+  .detail-btn-container
+    @media screen and (max-width: $tablet)
+      position: fixed
+      top: 120px
+      right: 0
+      margin-right: 5%
+      display: flex
+      flex-direction: column
+      height: 120px
+      justify-content: space-between
+      .duble-btn
+        width: 150px
+        height: 50px
+        padding: 0
+        display: flex
+        justify-content: center
+        align-items: center
+    @media screen and (max-width: $sm-phone)
+      position: absolute
+      top: 100px
+      right: 0
+      margin-right: 5%
+      height: 100px
+      .duble-btn
+        width: 120px
+        height: 40px
+        padding: 0
+        display: flex
+        justify-content: center
+        align-items: center
+
+.detail-title
+  font-size: 1.6em
+.detal-desc
+  font-size: 1.1em
+  margin-bottom: 30px
+  @media screen and (max-width: 1300px)
+    font-size: 0.9em
+  @media screen and (max-width: $tablet)
+    width: 80%
+    font-size: 1.1em
+  @media screen and (max-width: $sm-phone)
+    width: 100%
+
+.detail-client-container
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-bottom: 60px
+  @media screen and (max-width: 1300px)
+    margin-bottom: 10px
+  .detail-client-wrap
+    width: 18%
+    height: 70px
+    padding-bottom: 20px
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+      margin-bottom: 20px
+      opacity: 0.6
+
+.duble-btn
+  padding: 10px 20px
+  font-size: 0.8em
+  border: 3px solid $pink
+  cursor: pointer
+  transition: all .3s ease
+
+
+
+  &:hover
+    background: $active-pink
+    border-color: $active-pink
+.buy-btn
+  background: $pink
+  color: white !important
+  margin-right: 20px
+  @media screen and (max-width: $tablet)
+    margin-right: 0
+
+.package-btn
+  color: $pink
+  &:hover
+    color: white !important

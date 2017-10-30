@@ -1,0 +1,81 @@
+extends ../layout_admin
+
+block content
+  .admin-nav
+    nav(aria-label='breadcrumb', role='navigation')
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='/home') Home
+        li.breadcrumb-item.active(aria-current='page') Create
+        
+
+    .userName-wrap
+      p.userName Username: <strong>#{user}</strong>
+      a.btn.btn-sm.btn-info.admin-user-setting-btn(href='/signup', role='button') Create new user
+      a.btn.btn-sm.btn-warning.admin-user-setting-btn(href='/logout', role='button') Log Out
+        
+
+  .admin-inner
+    h2.admin-pageTitle Create a new portfolio
+    form.insert-form(action="/insert", method="POST")
+      //title
+      .form-group
+        label(for='title') Title
+        input.form-control(type='text',name="title", placeholder='Enter title', required)
+          
+      // Font files
+      //- .form-group
+      //-   label.btn-label Font files
+      //-   button.btn.btn-primary.upload-btn(type='button') Upload File
+      //-   small.form-text.text-muted You can select multiple images
+      //-   input.upload-input.form-control(type='file', name='fontFile', style='display:none', multiple="multiple", required)
+      //category
+      .form-group
+        label Category
+        br
+        .form-check.form-check-inline
+          label.form-check-label
+            input.form-check-input(type='radio', name="category", value='serif', checked)
+            |  Serif
+        .form-check.form-check-inline
+          label.form-check-label
+            input.form-check-input(type='radio', name="category", value='sans')
+            |  Sans serif
+        .form-check.form-check-inline
+          label.form-check-label
+            input.form-check-input(type='radio', name="category", value='script')
+            |  Script
+        .form-check.form-check-inline
+          label.form-check-label
+            input.form-check-input(type='radio', name="category", value='decorative')
+            |  Decolative
+      //description
+      .form-group
+        label Description
+        br
+        textarea.insert-desc.form-control(type='text',name="desc", placeholder='Enter Description', required)
+      //clients
+      .form-group.up-btns
+        label.btn-label Clients
+        button.btn.btn-primary.upload-btn(type='button') Upload File
+        //small.form-text.text-muted You can select multiple images
+        input.upload-input.form-control(type='file', name='clients', style='display:none', required)
+                  
+      //thumb            
+      .form-group.up-btns
+        label.btn-label Thumbnail
+        button.btn.btn-primary.upload-btn(type='button') Upload File
+        //small.form-text.text-muted Choose only one image
+        input.upload-input.form-control(type='file', name='thumb', style='display:none', required)
+                
+      //images        
+      .form-group.up-btns
+        label.btn-label Images
+        button.btn.btn-primary.upload-btn(type='button') Upload File
+        //small.form-text.text-muted You can select multiple images
+        input.upload-input.form-control(type='file', name='images', style='display:none', required)
+        
+                
+      button.btn.btn-info.btn-lg(type='submit', name='insert') Create
+
+    

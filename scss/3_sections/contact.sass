@@ -1,0 +1,141 @@
+.flex-row-between
+  display: flex
+  justify-content: space-between
+  @media screen and (max-width: $tablet)
+    flex-direction: column
+    justify-content: flex-start
+
+.contact-text
+  font-size: 1.2em
+  margin-bottom: 40px
+
+.form-container
+  width: 45%
+  height: 80vh
+  @media screen and (max-width: $tablet)
+    width: 100%
+    height: auto
+  @media screen and (max-width: $sm-phone)
+    color: white
+
+.required
+  color: $pink
+
+.contact-form
+  width: 80%
+  @media screen and (max-width: $desktop)
+    width: 100%
+  .form-field
+    height: 80px
+    @include clearfix
+    &:last-child
+      height: 200px
+    .contact-wrap
+      position: relative
+      width: 100%
+      .contact-input
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        padding: 12px 18px
+        border: 4px solid white
+        border-radius: 0
+        transition: border-color ease .4s
+        @media screen and (max-width: $sm-phone)
+          color: white
+        &:focus
+          border-color: $pink
+      .cotact-label
+        position: absolute
+        top: 22px
+        left: 20px
+        background: $yellow
+        font-size: 0.8em
+        transition: all 0.3s ease
+        @media screen and (max-width: $lg-phone)
+          background: transparent
+        @media screen and (max-width: $sm-phone)
+          background: $purple
+          color: white
+      .goAbove
+        top: -10px
+
+
+//independent
+.service-select
+  position: relative
+  &:before
+    content: url("../img/downIcon.svg")
+    position: absolute
+    width: 30px
+    height: 30px
+    display: inline-block
+    top: 25%
+    right: 30px
+  .select
+    height: 60px
+    appearance: none
+    font-size: 0.9em
+    display: block
+    padding-left: 150px !important
+    @media screen and (max-width: $sm-phone)
+      padding-left: 80px !important
+      color: white
+
+
+
+.textarea
+  height: 200px
+
+input[type="submit"]#contact-btn
+  margin-top: 140px
+  background: $pink
+  padding: 10px 30px
+  color: white
+  transition: all 0.3s ease
+  &:hover
+    font-style: italic
+    background: $active-pink
+
+
+
+// contact info
+.contact-info-container
+  width: 45%
+  height: 80vh
+  margin-bottom: 30px
+  @media screen and (max-width: $tablet)
+    width: 100%
+
+.contact-info-inner
+  padding-top: 180px
+  width: 100%
+  @media screen and (max-width: $tablet)
+    padding-top: 50px
+.contact-info-field
+  margin-bottom: 20px
+  color: white
+  @media screen and (max-width: $tablet)
+    color: $text-color
+  .contact-info-label
+    display: inline-block
+    font-size: 0.8em
+    text-align: right
+    margin-right: 10px
+  .contact-info-text
+    text-decoration: none
+    color: white
+    transition: all .3s ease
+    @media screen and (max-width: $tablet)
+      color: $pink
+    &:hover
+      color: $active-pink
+      margin-top: -5px
+
+.contact-address
+ padding-top: 30px
+
+.map
+  width: 100%
+  height: 350px

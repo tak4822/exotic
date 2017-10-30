@@ -1,0 +1,67 @@
+
+p.tester-btn Try Typo 
+  span.tester-btn-anim.active |
+  
+.tester-container
+  .close-btn-tester-wrap
+    span.close-btn-tester &times;
+  .tester-options
+    .options-top-container
+      .options-top-field.tester-select
+        p.tester-label Typograpy
+        label.tester-select-wrap
+          select#testerTypo.select
+            option(value="Butler") Butler
+            option(value="Camption") Camption
+            option(value="Coco") Coco
+            option(value="Duma") Duma
+            option(value="King-Basil-Lite") King-Basil-Lite
+            option(value="London") London
+            option(value="Mosk") Mosk
+            option(value="Motorless-Drilled") Motorless-Drilled
+            option(value="Scratch") Scratch
+            
+      .options-top-field
+        p.tester-label Weight
+        .weight-wrap
+          .weigth-box(data-weight="700")
+            p.weight-text.bold Bold
+          .weigth-box.active(data-weight="400")
+            p.weight-text Regular
+          .weigth-box(data-weight="300")
+            p.weight-text.light Light
+    .options-bottom-container
+      .options-bottom-wrap.color
+        p.tester-label-sm Color
+        .options-input-wrap
+          .options-col-wrap
+            label.font-col-label Font: 
+            .color-picker.font-col-pk
+              input(type="hidden",class="fontCol")
+          .options-col-wrap
+            label.font-col-label Background: 
+            .color-picker.bg-col-pk
+              input(type="hidden",class="backCol")
+      .options-bottom-wrap.case
+        p.tester-label-sm Case
+        .options-input-wrap
+          .case-box(data-case="upper")
+            p.case-text A
+          .case-box(data-case="lower")
+            p.case-text a                
+      .options-bottom-wrap.size
+        p.tester-label-sm Size
+          .size-text
+            span.tester-size 40
+            span.tester-label-sm px
+          input#size.size-slider(type='range', min='1', max='150', value='40')
+                
+
+  .tester-field(contenteditable="true") Try your typography here.  Choose option the above section.
+  .tester-btns
+    a.tester.buy-btn.duble-btn(href="/buy/id") Buy 
+      span.buy-typo
+    a.package-btn.duble-btn(href="/packages") Check Packages
+    
+    
+  

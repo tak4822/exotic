@@ -1,0 +1,153 @@
+extends ../layout
+
+block content
+  .purple-back.color-back
+  .svg-bg-wrap
+    svg(xmlns='http://www.w3.org/2000/svg', viewbox='1975.907 0 1214.173 1081.859')
+      path#Path_11.svg-bg.yellow(d='M5168.08,0,4509.592,1081.859H3953.907V0Z', transform='translate(-2420)')
+  .main-container
+    .inner-container.flex-row-between
+      .form-container
+        p.contact-text If you are interested in learning more, or are looking for a quote the typeface design services please contact us.
+        form.contact-form
+          //name
+          .form-field
+            label.contact-wrap
+              input.contact-input(type="text", name="name")
+              p.cotact-label Name 
+                span.required *
+          //email
+          .form-field
+            label.contact-wrap
+              input.contact-input(type="email", name="email")
+              p.cotact-label Email 
+                span.required *
+          //service
+          .form-field.service-select
+            label.contact-wrap
+              select.contact-input.select(name="service")
+                option(value="", style="color:white;") ーーー
+                option(value="buy") Buy typography
+                option(value="consulting") Consulting
+                option(value="makeOwn") Make your own design
+              p.cotact-label Service
+          //message
+          .form-field
+            label.contact-wrap
+              textarea.contact-input.textarea(name="message")
+              p.cotact-label Message
+                span.required *
+          //btn
+          input#contact-btn(type="submit", name="contact-form", value="sent")
+    
+      
+      .contact-info-container
+        .contact-info-inner
+          .contact-info-field
+            span.contact-info-label Email: 
+            a.contact-info-text(href="mailTo:xotic_typo@info.com")  exotic_typo@info.com
+          .contact-info-field
+            span.contact-info-label Tell: 
+            a.contact-info-text(href="tell:0867426632") +(08) 6742 6632
+          
+          .contact-info-field.contact-address
+            span.contact-info-label Address: 
+            span.contact-info-adress-text 570 Dunsmuir St #600, Vancouver, BC V6B 1Y1
+          
+          #map.map
+  script.
+    var map;
+    function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 49.282705, lng: -123.115353},
+    zoom: 15,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    styles: [
+        {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+        {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+        {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+        {
+          featureType: 'administrative.locality',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'poi',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'poi.park',
+          elementType: 'geometry',
+          stylers: [{color: '#263c3f'}]
+        },
+        {
+          featureType: 'poi.park',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#6b9a76'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'geometry',
+          stylers: [{color: '#38414e'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'geometry.stroke',
+          stylers: [{color: '#212a37'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#9ca5b3'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'geometry',
+          stylers: [{color: '#746855'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'geometry.stroke',
+          stylers: [{color: '#1f2835'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#f3d19c'}]
+        },
+        {
+          featureType: 'transit',
+          elementType: 'geometry',
+          stylers: [{color: '#2f3948'}]
+        },
+        {
+          featureType: 'transit.station',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'geometry',
+          stylers: [{color: '#17263c'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#515c6d'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'labels.text.stroke',
+          stylers: [{color: '#17263c'}]
+        }
+      ]
+    });
+    var marker = new google.maps.Marker({
+      position: {lat: 49.282705, lng: -123.115353},
+      map: map
+    });
+    }
+  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAia9KbwDNm3MTNuRxRahaoSu73wqvU3Fc&callback=initMap')
+
+  
